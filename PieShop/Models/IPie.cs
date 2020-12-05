@@ -7,8 +7,8 @@ namespace PieShop.Models
 {
     interface IPie
     {
-        public IEnumerator<Pie> AllPies { get;}
-        public IEnumerable<Pie> PiesOfTheWeek { get;}
+        IEnumerable<Pie> AllPies { get;}
+        IEnumerable<Pie> PiesOfTheWeek { get;}
         Pie GetPieById(int pieId);
     }
 }
