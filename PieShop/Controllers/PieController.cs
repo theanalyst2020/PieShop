@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PieShop.Models;
+using PieShop.ViewModels;
 
 namespace PieShop.Controllers
 {
@@ -19,8 +20,14 @@ namespace PieShop.Controllers
 
         public ViewResult ListPies()
         {
-                return View(PieInstance.AllPies);
-         }
+            //   ViewBag.availableCakes = "There are 50 options available";
+            //  return View(PieInstance.AllPies);
+            ListPiesViewModel listPiesViewModel = new ListPiesViewModel();
+            listPiesViewModel.AllPies = PieInstance.AllPies;
+            listPiesViewModel.CurrentCategory = "cupcakes";
+            listPiesViewModel.AvailableCakes = 6;
+            return View(listPiesViewModel);
+        }
 
 
     }
