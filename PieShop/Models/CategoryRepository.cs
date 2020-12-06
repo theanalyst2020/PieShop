@@ -11,7 +11,7 @@ namespace PieShop.Models
         {
             new Category {CategoryId=1, CategoryName="Cupcakes", Description="20 pieces of cupcakes"},
             new Category {CategoryId=2, CategoryName="Cheese Cakes", Description="Cheesy all the way"},
-            new Category {CategoryId=1, CategoryName="Fruit pies", Description="All-fruity pies"}
+            new Category {CategoryId=3, CategoryName="Fruit pies", Description="All-fruity pies"}
 
         };
     }
