@@ -24,8 +24,8 @@ namespace PieShop.Controllers
             //  return View(PieInstance.AllPies);
             ListPiesViewModel listPiesViewModel = new ListPiesViewModel();
             listPiesViewModel.AllPies = PieInstance.AllPies;
-            listPiesViewModel.CurrentCategory = "cupcakes";
-            listPiesViewModel.AvailableCakes = 6;
+            listPiesViewModel.CurrentCategory = "Amazing Cakes";
+            listPiesViewModel.AvailableCakes = PieInstance.AllPies.Count();
             return View(listPiesViewModel);
         }
 

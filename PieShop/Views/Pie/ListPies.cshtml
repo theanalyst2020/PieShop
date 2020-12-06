@@ -17,11 +17,19 @@
 
     @foreach (var pieIndex in Model.AllPies)
     {
-        <div>
-            <h2>@pieIndex.Name</h2>
-            <h2>@pieIndex.Price.ToString("C")</h2>
-            <h2>@pieIndex.Category.CategoryName</h2>
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="@pieIndex.ImageThumbnailUrl" alt="" />
+                <div class="caption">
+                    <h3 class="pull-right">@pieIndex.Price.ToString("c")</h3>
+                    <h3> <a>@pieIndex.Name</a></h3>
+                    <p>@pieIndex.ShortDescription</p>
+                </div>
+            </div>
+
         </div>
+
     }
 </body>
 
